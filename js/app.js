@@ -1,32 +1,40 @@
+const sunday = document.querySelector(".sunday");
+const monday = document.querySelector(".monday");
+const tuesday = document.querySelector(".tuesday");
+const wednesday = document.querySelector(".wednesday");
+const thursday = document.querySelector(".thursday");
+const friday = document.querySelector(".friday");
+const saturday = document.querySelector(".saturday");
+
 function setClock() {
+
     let currentDate = new Date();
     let day = currentDate.getDay();
-    let currentDay = currentDate.toLocaleString();
     let seconds = currentDate.getSeconds();
     let minute = currentDate.getMinutes();
     let hour = currentDate.getHours();
 
     switch (day) {
         case 0:
-            day = "Sunday";
+            sunday.style.color = "red";
             break;
         case 1:
-            day = "Monday";
+            monday.style.color = "red";
             break;
         case 2:
-            day = "Tuesday";
+            tuesday.style.color = "red";
             break;
         case 3:
-            day = "Wednesday";
+            wednesday.style.color = "red";
             break;
         case 4:
-            day = "Thursday";
+            thursday.style.color = "red";
             break;
         case 5:
-            day = "Friday";
+            friday.style.color = "red";
             break;
         case 6:
-            day = "Saturday";
+            saturday.style.color = "red";
             break;
     }
 
